@@ -1,6 +1,5 @@
-# City finder
-> An app that provides all the cities of a given country. Built using React, Redux, Tailwind CSS, Jest, and the countriesnow API,
-
+# countries-worldwide
+> An App that displays a list of countries, including information about their population and cities. Built using React, Redux, Tailwind CSS, Jest, and the Countries API,
 
 ## Built With
 - React
@@ -20,11 +19,11 @@
 
 Go to your terminal, navigate to your working directory and run
 
-`git clone https://github.com/RayhanTabase/city-finder.git`
+`git clone https://github.com/RayhanTabase/countries-worldwide.git`
 
 After that navigate to the newly created folder
 
-`cd city-finder`
+`cd countries-worldwide`
 
 You now have access to the files.
 To install necessary dependencies run
