@@ -1,5 +1,4 @@
 const Details = () => (
-
   <div>
     Details page
   </div>

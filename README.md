@@ -1,5 +1,5 @@
-# weather-stone
-> An app that provides the current weather condition of a chosen city. Built using React, Redux, Tailwind CSS, Jest, and the Open weather API,
+# City finder
+> An app that provides all the cities of a given country. Built using React, Redux, Tailwind CSS, Jest, and the countriesnow API,
 
 
 ## Built With
@@ -20,11 +20,11 @@
 
 Go to your terminal, navigate to your working directory and run
 
-`git clone https://github.com/RayhanTabase/weather-stone.git`
+`git clone https://github.com/RayhanTabase/city-finder.git`
 
 After that navigate to the newly created folder
 
-`cd weather-stone`
+`cd city-finder`
 
 You now have access to the files.
 To install necessary dependencies run
