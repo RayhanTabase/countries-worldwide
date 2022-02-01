@@ -1,7 +1,7 @@
 import { START_REQUEST_COUNTRIES, GET_COUNTRIES_SUCCESS, GET_COUNTRIES_FAILURE } from './constants';
 
 const initialState = {
-  loading: false,
+  loading: true,
   countries: [],
   error: '',
 };

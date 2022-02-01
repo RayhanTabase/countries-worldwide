@@ -14,13 +14,32 @@ const Details = () => {
       </Link>
 
       {country ? (
-        <div>
-          {country.name}
-        </div>
+        <>
+          <div>
+            {country.name}
+          </div>
+          <div>
+            {country.state_name}
+          </div>
+          <div>
+            <h3>
+              {country.capital.length}
+              {' '}
+              Capital(s)
+            </h3>
+            {country.capital.map((cap) => (
+              <p key={cap.name}>{cap.name}</p>
+            ))}
+          </div>
+          <div>
+            {country.un_geoscheme.region}
+          </div>
+          <div>
+            {country.un_geoscheme.subregion}
+          </div>
+        </>
       ) : (
-        <div>
-          <p>Loading...</p>
-        </div>
+        <p>No Results</p>
       )}
     </>
   );
