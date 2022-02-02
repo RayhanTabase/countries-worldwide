@@ -25,15 +25,15 @@ describe('Home page test', () => {
 describe('Index card', () => {
   test('snapshot test and name render for IndexCard component', () => {
     const { asFragment } = render(
-      <IndexCard 
+      <IndexCard
         key="1"
         id="004"
         name="Afghanistan"
         population="3140853"
-        flagName='AF'
+        flagName="AF"
         shade={false}
       />,
-      { wrapper: MemoryRouter }
+      { wrapper: MemoryRouter },
     );
     expect(asFragment()).toMatchSnapshot();
     expect(screen.getByText('Afghanistan')).toBeInTheDocument();
