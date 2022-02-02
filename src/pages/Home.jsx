@@ -67,6 +67,7 @@ const Home = () => {
                 id={country.iso_3166.numeric}
                 name={country.name}
                 population={country.population.total}
+                flagName={country.iso_3166.alpha2}
               />
             ))}
           </ul>

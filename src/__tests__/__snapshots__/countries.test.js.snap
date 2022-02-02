@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page test snapshot test for Home 1`] = `
+<DocumentFragment>
+  <div>
+    <input
+      placeholder="Search country by name"
+      value=""
+    />
+    <br />
+    <select
+      name=""
+    >
+      <option
+        value="all"
+      >
+        All
+      </option>
+    </select>
+    <p>
+      Loading...
+    </p>
+    <ul />
+    <div>
+      <button
+        type="button"
+      >
+        Prev
+      </button>
+      <p>
+        1
+      </p>
+      <button
+        type="button"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Index card snapshot test for IndexCard component 1`] = `
+<DocumentFragment>
+  <li>
+    <a
+      href="/details/undefined"
+    >
+      <p>
+        Ghana
+      </p>
+      <p>
+        3000
+      </p>
+    </a>
+  </li>
+</DocumentFragment>
+`;
