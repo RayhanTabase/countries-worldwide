@@ -1314,3 +1314,77 @@ exports[`Home page test snapshot test for Home 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Index card snapshot test and name render for IndexCard component 1`] = `
+<DocumentFragment>
+  <li
+    class="bg-[#4369B0] border-[#3E61A3] border h-40"
+  >
+    <a
+      href="/details/004"
+    >
+      <div
+        class="flex flex-col justify-between h-[100%] w-[100%] p-2"
+      >
+        <div
+          class="h-[50%] w-[100%] flex justify-between items-start"
+        >
+          <svg
+            class="w-[70%] bg-yellow-100 "
+            viewBox="0 0 513 342"
+          >
+            <path
+              d="M0 0h513v342H0z"
+              fill="#DB3E00"
+            />
+            <path
+              d="M331 0h182v342H331z"
+              fill="#479900"
+            />
+            <path
+              d="M0 0h181.8v342H0z"
+            />
+            <path
+              d="M256 126.7c-19.4 0-35.2 15.8-35.2 35.2v52.8h70.4v-52.8c0-19.5-15.8-35.2-35.2-35.2z"
+              fill="#FFF"
+            />
+            <path
+              d="M256 84.3c-47.7 0-86.4 38.7-86.4 86.4S208.3 257 256 257s86.4-38.7 86.4-86.4-38.7-86.3-86.4-86.3zm0 157.7c-39.4 0-71.4-32-71.4-71.4 0-39.4 32-71.4 71.4-71.4 39.4 0 71.4 32 71.4 71.4 0 39.5-32 71.4-71.4 71.4z"
+              fill="#FFF"
+            />
+          </svg>
+          <svg
+            class="w-[15%] justify-self-end"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="h-[50%] flex flex-col justify-end overflow-hidden gap-4"
+        >
+          <p
+            class="font-semibold max-h-[50%] text-right"
+          >
+            Afghanistan
+          </p>
+          <p
+            class="max-h-[50%] text-right"
+          >
+            3140.9k
+          </p>
+        </div>
+      </div>
+    </a>
+  </li>
+</DocumentFragment>
+`;
