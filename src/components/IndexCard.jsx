@@ -12,7 +12,7 @@ const IndexCard = ({
       <Link to={`/details/${id}`}>
         <div className="flex flex-col justify-between h-[100%] w-[100%] p-2">
           <div className="h-[50%] w-[100%] flex justify-between items-start">
-            <Flag className="w-[70%] bg-yellow-100 " />
+            <Flag className="w-[70%] max-h-[100%] " />
             <BsArrowRightCircle className="w-[15%] justify-self-end" />
           </div>
           <div className="h-[50%] flex flex-col justify-end overflow-hidden gap-4">

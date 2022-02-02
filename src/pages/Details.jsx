@@ -16,7 +16,7 @@ const Details = () => {
         <>
           <div className="flex p-3">
             <div className="w-[50%] max-w-28 max-h-28">
-              <Flag />
+              <Flag className="max-h-[100%]" />
             </div>
             <div className="w-[50%] flex flex-col justify-center items-end">
               <h2 className="text-lg font-semibold">
