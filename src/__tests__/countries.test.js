@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router-dom';
+// import { MemoryRouter } from 'react-router-dom';
 import store from '../redux/configureStore';
 
 import countryReducer from '../redux/countries/reducer';
@@ -26,14 +26,12 @@ describe('Index card', () => {
   test('snapshot test for IndexCard component', () => {
     const { asFragment } = render(
       <IndexCard key="1" name="Ghana" population="3000" />,
-      { wrapper: MemoryRouter },
     );
     expect(asFragment()).toMatchSnapshot();
   });
   test('should render the correct text content', () => {
     const { container } = render(
       <IndexCard key="1" name="Ghana" population="3000" />,
-      { wrapper: MemoryRouter },
     );
     const displayedText = container.querySelectorAll('p');
     expect(displayedText.length).toBe(2);
