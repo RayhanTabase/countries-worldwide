@@ -1,7 +1,11 @@
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Flags from 'country-flag-icons/react/3x2';
 import InfoCard from '../components/InfoCard';
+import SectionTitle from '../components/SectionTitle';
+import Cities from '../components/Cities';
+import getCities from '../utils/getCities';
 
 const Details = () => {
   const param = useParams();
@@ -9,6 +13,17 @@ const Details = () => {
   const { countries } = useSelector((state) => state.countriesReducer);
   const country = countries.find((country) => country.iso_3166.numeric === id);
   const Flag = country ? Flags[country.iso_3166.alpha2] : Flags;
+
+  const [cities, setCities] = useState([]);
+  const [countryName, setCountryName] = useState('');
+
+  if (!countryName && country) setCountryName(country.name);
+  useEffect(async () => {
+    if (countryName) {
+      const data = await getCities(countryName);
+      setCities(data);
+    }
+  }, [countryName]);
 
   return (
     <>
@@ -29,9 +44,7 @@ const Details = () => {
               </p>
             </div>
           </div>
-          <p className="text-sm bg-[#35548B] pl-3">
-            Other Information
-          </p>
+          <SectionTitle title="Other Information" />
           <ul>
             <InfoCard
               key="1"
@@ -67,6 +80,8 @@ const Details = () => {
       ) : (
         <p className="text-center p-16">No Results</p>
       )}
+      <SectionTitle title="Cities" />
+      <Cities cities={cities} />
     </>
   );
 };
