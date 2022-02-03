@@ -9,6 +9,7 @@ import countryReducer from '../redux/countries/reducer';
 import { START_REQUEST_COUNTRIES, GET_COUNTRIES_SUCCESS, GET_COUNTRIES_FAILURE } from '../redux/countries/constants';
 import Home from '../pages/Home';
 import IndexCard from '../components/IndexCard';
+import InfoCard from '../components/InfoCard';
 import data from '../utils/data';
 
 describe('Home page test', () => {
@@ -23,7 +24,7 @@ describe('Home page test', () => {
 });
 
 describe('Index card', () => {
-  test('snapshot test and name render for IndexCard component', () => {
+  test('snapshot test for IndexCard component', () => {
     const { asFragment } = render(
       <IndexCard
         key="1"
@@ -36,7 +37,43 @@ describe('Index card', () => {
       { wrapper: MemoryRouter },
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+  test('name render for IndexCard component', () => {
+    render(
+      <IndexCard
+        key="1"
+        id="004"
+        name="Afghanistan"
+        population="3140853"
+        flagName="AF"
+        shade={false}
+      />,
+      { wrapper: MemoryRouter },
+    );
     expect(screen.getByText('Afghanistan')).toBeInTheDocument();
+  });
+});
+
+describe('Extra Info card', () => {
+  test('snapshot test for InfoCard rendered', () => {
+    const { asFragment } = render(
+      <InfoCard
+        key="1"
+        title="Capital"
+        info="Greater Accra"
+      />,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+  test('test for InfoCard information rendered', () => {
+    render(
+      <InfoCard
+        key="1"
+        title="Capital"
+        info="Greater Accra"
+      />,
+    );
+    expect(screen.getByText('Greater Accra')).toBeInTheDocument();
   });
 });
 
@@ -61,7 +98,7 @@ describe('Unit test for countries reducer', () => {
     );
   });
 
-  it('test that failed fetch', () => {
+  it('test that fetch failed', () => {
     const errorMessage = 'failed to respond';
     expect(countryReducer({ countries: [], loading: true, error: '' }, { type: GET_COUNTRIES_FAILURE, payload: errorMessage })).toEqual(
       {

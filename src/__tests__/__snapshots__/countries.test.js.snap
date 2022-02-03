@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Extra Info card snapshot test for InfoCard rendered 1`] = `
+<DocumentFragment>
+  <li
+    class="even:bg-[#3E61A3] bg-[#4369B0] flex flex-wrap justify-between h-24 px-1 items-center"
+  >
+    <p
+      class="w-[30%]"
+    >
+      Capital
+    </p>
+    <p
+      class="w-[40%]"
+    >
+      Greater Accra
+    </p>
+    <svg
+      class="w-[10%]"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </li>
+</DocumentFragment>
+`;
+
 exports[`Home page test snapshot test for Home 1`] = `
 <DocumentFragment>
   <div>
@@ -1315,7 +1349,7 @@ exports[`Home page test snapshot test for Home 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Index card snapshot test and name render for IndexCard component 1`] = `
+exports[`Index card snapshot test for IndexCard component 1`] = `
 <DocumentFragment>
   <li
     class="bg-[#4369B0] border-[#3E61A3] border h-40"
@@ -1330,7 +1364,7 @@ exports[`Index card snapshot test and name render for IndexCard component 1`] = 
           class="h-[50%] w-[100%] flex justify-between items-start"
         >
           <svg
-            class="w-[70%] bg-yellow-100 "
+            class="w-[70%] max-h-[100%] "
             viewBox="0 0 513 342"
           >
             <path

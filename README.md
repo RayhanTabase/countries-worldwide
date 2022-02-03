@@ -24,6 +24,43 @@
  - [Git](https://git-scm.com/downloads)
  - [Node](https://nodejs.org/en/download/)
 
+## Sample code
+
+```
+if (queryRegion !== 'all') {
+    countries = countries.filter((country) => {
+      const countryRegion = country.un_geoscheme.region;
+      return countryRegion === queryRegion;
+    });
+    countriesLength = countries.length;
+  }
+
+  const regionPop = countries.reduce(
+    (partialSum, country) => partialSum + parseInt(country.population.total, 10), 0,
+  );
+
+  if (queryName.trim()) {
+    countries = countries.filter((country) => {
+      const name = country.name.toUpperCase();
+      return name.includes(queryName.trim().toUpperCase());
+    });
+    countriesLength = countries.length;
+  }
+
+  const changePageNumber = (value) => {
+    if (value < 0 && pageNumber === 1) return;
+    if (value > 0 && pageNumber * 6 > countriesLength) {
+      return;
+    }
+    setPageNumber((prev) => prev + value);
+  };
+
+```
+
+```
+ { Math.abs(population) > 999 ? `${((Math.abs(population) / 1000).toFixed(1))}k` : Math.abs(population)}
+```
+
 
 ## Installation
 

@@ -20,7 +20,7 @@ const IndexCard = ({
               {name}
             </p>
             <p className="max-h-[50%] text-right">
-              { Math.abs(population) > 999 ? `${Math.sign(population) * ((Math.abs(population) / 1000).toFixed(1))}k` : Math.sign(population) * Math.abs(population)}
+              { Math.abs(population) > 999 ? `${((Math.abs(population) / 1000).toFixed(1))}k` : Math.abs(population)}
             </p>
           </div>
         </div>

@@ -24,8 +24,8 @@ const Details = () => {
               </h2>
               <p>
                 { Math.abs(country.population.total) > 999
-                  ? `${Math.sign(country.population.total) * ((Math.abs(country.population.total) / 1000).toFixed(1))}k`
-                  : Math.sign(country.population.total) * Math.abs(country.population.total)}
+                  ? `${((Math.abs(country.population.total) / 1000).toFixed(1))}k`
+                  : Math.abs(country.population.total)}
               </p>
             </div>
           </div>
