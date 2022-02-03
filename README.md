@@ -1,6 +1,16 @@
 # countries-worldwide
 > An App that displays a list of countries, including information about their population and cities. Built using React, Redux, Tailwind CSS, Jest, and the Countries API,
 
+## Screenshots
+![world countries](./assets/screengif.gif)
+
+![world countries](./assets/screen1.png)
+
+![world countries](./assets/screen2.png)
+
+## Live Version
+[Go Live](https://festive-shirley-0ca9cb.netlify.app/)
+
 ## Built With
 - React
 - Redux
