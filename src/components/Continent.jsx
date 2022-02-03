@@ -33,7 +33,6 @@ const Continent = ({ region, totalPop }) => {
 
     case 'Africa':
       marked = [];
-      // marked.push(data[0]);
       marked.push({ country: 'ng', value: 1389618778 });
       marked.push({ country: 'ng', value: 210797836 });
 
