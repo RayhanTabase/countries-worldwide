@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Flags from 'country-flag-icons/react/3x2';
+
 import InfoCard from '../components/InfoCard';
 import SectionTitle from '../components/SectionTitle';
 import Cities from '../components/Cities';
@@ -14,14 +15,14 @@ const Details = () => {
   const country = countries.find((country) => country.iso_3166.numeric === id);
   const Flag = country ? Flags[country.iso_3166.alpha2] : Flags;
 
-  const [cities, setCities] = useState([]);
+  const [citiesData, setCitiesData] = useState([]);
   const [countryName, setCountryName] = useState('');
 
   if (!countryName && country) setCountryName(country.name);
   useEffect(async () => {
     if (countryName) {
       const data = await getCities(countryName);
-      setCities(data);
+      setCitiesData(data);
     }
   }, [countryName]);
 
@@ -81,7 +82,7 @@ const Details = () => {
         <p className="text-center p-16">No Results</p>
       )}
       <SectionTitle title="Cities" />
-      <Cities cities={cities} />
+      <Cities citiesData={citiesData} />
     </>
   );
 };
