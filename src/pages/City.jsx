@@ -14,8 +14,6 @@ const City = () => {
     setWeather(data.weather[0]);
     setMain(data.main);
     setWind(data.wind);
-
-    console.log(data);
   }, []);
   return (
     <div className="px-4">
