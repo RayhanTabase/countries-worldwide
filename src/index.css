@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300&display=swap');
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
