@@ -18,8 +18,8 @@ const City = () => {
     console.log(data);
   }, []);
   return (
-    <div>
-      {city}
+    <div className="px-4">
+      <h3 className=" text-lg font-bold mb-10">{city}</h3>
       {
         weather
           ? (

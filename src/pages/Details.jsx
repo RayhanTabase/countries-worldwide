@@ -17,12 +17,16 @@ const Details = () => {
 
   const [citiesData, setCitiesData] = useState([]);
   const [countryName, setCountryName] = useState('');
+  const [loadingCities, setLoadingCities] = useState(true);
 
   if (!countryName && country) setCountryName(country.name);
   useEffect(async () => {
     if (countryName) {
       const data = await getCities(countryName);
-      setCitiesData(data);
+      console.log(data);
+      if (!data) setCitiesData([]);
+      else setCitiesData(data);
+      setLoadingCities(false);
     }
   }, [countryName]);
 
@@ -30,12 +34,12 @@ const Details = () => {
     <>
       {country ? (
         <>
-          <div className="flex p-3">
-            <div className="w-[50%] max-w-28 max-h-28">
+          <div className="flex justify-between p-3">
+            <div className="w-[45%] max-w-28 max-h-28">
               <Flag className="max-h-[100%]" />
             </div>
-            <div className="w-[50%] flex flex-col justify-center items-end">
-              <h2 className="text-lg font-semibold">
+            <div className="w-[45%] flex flex-col justify-center items-end">
+              <h2 className="text-lg font-semibold text-right">
                 {country.name}
               </h2>
               <p>
@@ -51,38 +55,47 @@ const Details = () => {
               key="1"
               title="State"
               info={country.state_name ? country.state_name : 'None'}
+              clickable={false}
             />
             { country.capital ? country.capital.map((cap, index) => (
               <InfoCard
-                key="2"
+                key={cap.name}
                 title={`Capital ${index + 1}`}
                 info={cap.name}
+                clickable={false}
               />
             ))
               : (
                 <InfoCard
-                  key="3"
+                  key="2"
                   title="Capital"
                   info="None"
+                  clickable={false}
                 />
               )}
             <InfoCard
-              key="4"
+              key="3"
               title="Region"
               info={country.un_geoscheme.region ? country.un_geoscheme.region : 'None'}
+              clickable={false}
             />
             <InfoCard
-              key="5"
+              key="4"
               title="Sub-region"
               info={country.un_geoscheme.subregion ? country.un_geoscheme.subregion : 'None'}
+              clickable={false}
             />
           </ul>
+          <SectionTitle title="Cities" />
+          <Cities
+            citiesData={citiesData}
+            loading={loadingCities}
+            capital={country.capital ? country.capital.map((cap) => cap.name) : []}
+          />
         </>
       ) : (
         <p className="text-center p-16">No Results</p>
       )}
-      <SectionTitle title="Cities" />
-      <Cities citiesData={citiesData} />
     </>
   );
 };
