@@ -5,8 +5,6 @@ import { BsArrowRightCircle } from 'react-icons/bs';
 const CityCard = ({ title }) => {
   const param = useParams();
   const { id } = param;
-  console.log(id);
-
   return (
     <li className="odd:bg-[#3E61A3] bg-[#4369B0]">
       <Link to={`/city/weather/${id}/${title}`}>

@@ -23,7 +23,6 @@ const Details = () => {
   useEffect(async () => {
     if (countryName) {
       const data = await getCities(countryName);
-      console.log(data);
       if (!data) setCitiesData([]);
       else setCitiesData(data);
       setLoadingCities(false);

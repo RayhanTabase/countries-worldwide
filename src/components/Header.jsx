@@ -6,7 +6,6 @@ import { useLocation, Link } from 'react-router-dom';
 const Header = () => {
   const location = useLocation();
   const locationList = location.pathname.split('/');
-  console.log(locationList[3]);
   return (
     <header className="flex justify-between p-2 mb-5 border-b border-blue-400">
       {
