@@ -5,15 +5,27 @@ import { useLocation, Link } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
+  const locationList = location.pathname.split('/');
   return (
     <header className="flex justify-between p-2 mb-5 border-b border-blue-400">
-      { location.pathname !== '/'
-        ? (
+      {
+          location.pathname === '/' && <p>2022</p>
+      }
+
+      { location.pathname.includes('/details/')
+          && (
           <Link to="/">
             <IoIosArrowBack />
           </Link>
-        )
-        : '2022'}
+          )}
+
+      {
+          locationList[4] && (
+            <Link to={`/details/${locationList[3]}`}>
+              <IoIosArrowBack />
+            </Link>
+          )
+      }
 
       <h1>Worldwide countries</h1>
       <div className="flex justify-center items-center gap-2">
