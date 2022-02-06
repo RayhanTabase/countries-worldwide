@@ -8,7 +8,7 @@ const IndexCard = ({
 }) => {
   const Flag = Flags[flagName];
   return (
-    <li className={`${shade ? 'bg-[#3E61A3] border-[#4369B0]' : 'bg-[#4369B0] border-[#3E61A3] border'} h-40`}>
+    <li className={`${shade ? 'bg-[#38568d] border-[#4369B0]' : 'bg-[#4369B0] border-[#3E61A3] border'} h-40`}>
       <Link to={`/details/${id}`}>
         <div className="flex flex-col justify-between h-[100%] w-[100%] p-2">
           <div className="h-[50%] w-[100%] flex justify-between items-start">
