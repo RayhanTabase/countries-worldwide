@@ -33,7 +33,7 @@ const Cities = ({ citiesData, loading, capital }) => {
   return (
     <>
       {
-      cities.length > 0
+      citiesData.length > 0
         ? (
           <>
             <div className="flex justify-center items-center p-4">
@@ -43,6 +43,7 @@ const Cities = ({ citiesData, loading, capital }) => {
                 className="bg-blue-400 text-white placeholder:text-white rounded p-2"
               />
             </div>
+            {cities.length < 1 && <p className="text-center">Not found</p>}
             <ul>
               {
                 cities.slice((pageNumber - 1) * 5, pageNumber * 5).map((city) => (
