@@ -1,5 +1,5 @@
 # countries-worldwide
-> An App that displays a list of countries, including information about their population and cities. Built using React, Redux, Tailwind CSS, Jest, and the Countries API,
+> An App that displays a list of countries, including information about their population and cities. Built using React, Redux, Tailwind CSS, Jest, Countries API, Openweather API
 
 ## Presentation
 - [Site](https://www.loom.com/share/ccd0d737d0c2448697508d3aab9160c8?sharedAppSource=personal_library)
