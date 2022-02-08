@@ -7,10 +7,10 @@
 
 ## Screenshots
 ![preview](./assets/screengif.gif)
-
 ![snapshot](./assets/screen1.png)
+![snapshot](./assets/screen3.png)
+![snapshot](./assets/screen4.png)
 
-![snapshot](./assets/screen2.png)
 
 ## Live Version
 [Go Live](https://festive-shirley-0ca9cb.netlify.app/)
